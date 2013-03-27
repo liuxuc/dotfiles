@@ -263,9 +263,9 @@ let PLUGIN_INFO =
       if (!doc.body)
         return;    
 
-      let style1 = 'font-size:120%;background: #AFD700; color:#005F00;font-weight:bold;padding:0 10px;'
-      let style2 = "padding: 0 10px;"
-      let markerStyle = "font-size:120%;color:#AFD700;";
+      let style1 = 'display:inline-block;font-size:120%;background: #AFD700;font-weight:bold;padding:0 10px;color:#' + (/\b(?:NO|NOT|ERROR)\b/.test(part1) ? 'f00' : '005F00');
+      let style2 = "display:inline-block;padding: 0 10px;white-space: pre-wrap;word-wrap: break-word;"
+      let markerStyle = "display:inline-block;font-size:120%;color:#AFD700;";
       let style =
         'opacity: 1; ' +
         important(
@@ -273,8 +273,8 @@ let PLUGIN_INFO =
           U.toStyleText({
             position: 'fixed',
             zIndex: 9999,
-            right: 0,
-            bottom: 0,
+            right: '1px',
+            bottom: '1px',
             MozBoxSizing: 'content-box',
           }) +
           elemStyle

@@ -10,7 +10,7 @@ set hintchars=abcdefghijklmnopqrstuvwxyz
 set showstatuslinks=2
 
 set mainecoon=amu
-let g:maine_coon_style = 'color:#fff;background:#484746;height: 16px;'
+let g:maine_coon_style = 'color:#fff;background:#484746;font-size:14px;line-height:1.5em;'
 
 highlight! StatusLine color:#B0FF00; background:#484746;font-family: "Consolas for Powerline";
 highlight! CmdLine color:#fff; background:#484746;font-family: "Consolas for Powerline";
