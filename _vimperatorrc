@@ -1,0 +1,74 @@
+﻿" source ~/vimperator/plugin/bookmarktoolbar-hint.js
+source ~/vimperator/plugin/_libly.js
+
+set hlsearch
+set novb
+set complete=s
+set newtab=help,addons,prefs,downloads
+set tabnumbers
+set hintchars=abcdefghijklmnopqrstuvwxyz
+set showstatuslinks=2
+
+set mainecoon=amu
+let g:maine_coon_style = 'color:#fff;background:#484746;height: 16px;'
+
+highlight! StatusLine color:#B0FF00; background:#484746;font-family: "Consolas for Powerline";
+highlight! CmdLine color:#fff; background:#484746;font-family: "Consolas for Powerline";
+hi Hint font-family: monospace; font-size: 16px; text-align:center; opacity:0.8; margin:0 10px 10px 0; padding:2px; background-color:#f07e00; color:white; border-radius:2px;
+hi HintElem background-color: #fdffc3; color: #222; opacity: 0.8;
+hi HintActive background-color: #ffdcdc;
+
+set nextpattern=\s*下一页|下一张|下一篇|下页|后一页|后页\s*,^\bnext\b,\\bnext\\b,\\older\\b,^>$,^(>>|»)$,^(>|»),(>|»)$,\\bmore\\b
+set previouspattern=\s*上一页|上一张|上一篇|上页|前一页|前页\s*,^\bprev|previous\b,\\bprev|previous\\b,\\newer\\b^<$,^(<<|«)$,^(<|«),(<|«)$
+
+map A <Nop>
+map <C-q> <Nop>
+map <C-p> <Nop>
+
+noremap c Y
+noremap C y
+
+noremap v 8j
+noremap j 8j
+noremap k 10k
+noremap a 10k
+
+noremap J <C-d>
+noremap K <C-u>
+
+noremap h gT
+noremap l gt
+noremap H h
+noremap L l
+
+noremap w gT
+noremap e gt
+
+map < <C-6>
+noremap > g$
+noremap , <C-o>
+noremap . <C-i>
+map U :ju<CR>
+map <C-.> :tabm<CR>
+noremap s <C-c>
+noremap S gf
+noremap <C-n> gb
+noremap <C-N> gB
+
+inoremap <C-a> <Ins><C-a><Ins>
+
+map <silent> <leader>b :dialog addbookmark<CR>
+map <silent> <leader>a t<CR>:addo<CR>
+map <silent> <leader>o t<CR>:pref<CR>
+map <silent> <leader>O t<CR>:pref!<CR>
+map <silent> <leader>m :marks<CR>
+map <silent> <leader>p :pa<CR>
+map <silent> <leader>r :res<CR>
+
+set! extensions.sessionmanager.old_startup_page=0
+set! extensions.sessionmanager.startup=0
+set! browser.startup.page=0
+
+" set ds=bing
+
+" vim: set ft=vimperator:
